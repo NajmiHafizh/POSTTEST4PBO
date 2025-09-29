@@ -4,7 +4,7 @@
 
 Manajemen Kantor Pos merupakan program Java yang dibuat untuk membantu mengelola data paket di kantor pos. Dengan program ini, pengguna dapat melihat, menambah, memperbarui, dan menghapus,mencari data paket sehingga pengelolaan informasi menjadi lebih terstruktur, efisien, dan informatif.
 
-Selain itu, program ini juga dilengkapi dengan fitur pencarian paket berdasarkan nomor resi dan nama penerima serta validasi input, sehingga memudahkan pengguna dalam menemukan data secara cepat dan mengurangi risiko kesalahan input.
+Selain itu, program ini juga dilengkapi dengan fitur pencarian paket berdasarkan nomor resi dan nama penerima, sehingga memudahkan pengguna dalam menemukan data secara cepat.
 
 Program ini juga dilengkapi dengan menerapkan abstraction serta menerapkan polymorphism dan juga menggunakan kombinasi abstract class dan interface secara bersamaan dalam program.
 
@@ -82,5 +82,14 @@ Saat memulai program pengguna akan di berikan pilihan menu, di menu tersebut ter
 
 ## ------------------------------------------------------------------------------------
 
+## >> Penerapan Abstraction <<
+- Pada program ini, abstraction diterapkan melalui penggunaan class Paket yang dibuat sebagai abstract class. Class ini tidak bisa dibuat objek secara langsung, tetapi harus diturunkan ke subclass. Subclass yang dibuat adalah PaketReguler dan PaketKilat. Keduanya memiliki implementasi masing-masing untuk method infoPaket().
 
+- Selain itu, terdapat juga interface Trackable yang diimplementasikan oleh subclass. Dengan begitu, program ini tidak hanya menggunakan abstract class saja, tetapi juga mengombinasikannya dengan interface. Hal ini menjadi contoh penerapan abstraction secara lengkap.
 
+## >> Penerapan Polymorphism <<
+Polymorphism dalam program ini ditunjukkan dalam dua bentuk, yaitu:
+
+- Pertama, overriding, yaitu method infoPaket() yang ada di class abstract Paket di-override oleh subclass PaketReguler dan PaketKilat. Dengan overriding ini, setiap jenis paket dapat menampilkan informasi yang berbeda sesuai kebutuhannya.
+
+- Kedua, overloading, yaitu pada fitur pencarian data paket. Program menyediakan dua cara pencarian, yaitu pencarian berdasarkan nomor resi dan pencarian berdasarkan nama penerima. Kedua method ini sama-sama bernama searchPaket, tetapi memiliki parameter yang berbeda.
